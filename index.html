@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Array Accept</title>
+</head>
+<body>
+    <input type="text">
+    <button id="btn1">ADD</button>
+    <button id="btn2">PRINT</button>
+    <h2></h2>
+    <script>
+        let x=document.querySelector("input");
+        let y=document.querySelector("#btn1");
+        let z=document.querySelector("#btn2");
+        let show=document.querySelector("h2");
+        let arr=[];
+        let arr2=[];
+        y.onclick=()=>{
+            arr.push(x.value);
+            console.log(arr);
+            x.value="";
+            x.focus();
+        }
+        z.onclick=()=>{
+            for(let i=arr.length-1;i>=0;i--){
+                var val=arr[i];
+                arr2.push(val);
+            }
+            arr2.join(",")
+            show.innerHTML=arr2;
+            console.log(arr2);
+        }
+    </script>
+</body>
+</html>
